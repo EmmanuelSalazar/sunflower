@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+body, html {
+    font-family:  "Playwrite DE Grund", cursive;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7ff;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.sunflower {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.center {
+    width: 100px;
+    height: 100px;
+    background-color: #654321; /* Color marrón para el centro */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Asegura que el centro esté por encima de los pétalos */
+}
+
+.petal {
+    width: 60px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 50% 50% 0 0;
+}
+
+.petal.main {
+    background-color: #ffd700;
+    z-index: 1; /* Los pétalos principales están por encima de los secundarios */
+}
+
+.petal.secondary {
+    background-color: #fff0b3;
+    z-index: 0; /* Los pétalos secundarios están en la capa más baja */
+}
+
+/* Posicionamiento de los pétalos principales */
+.petal.main:nth-child(2) { transform: translate(-50%, -100%) rotate(0deg); }
+.petal.main:nth-child(3) { transform: translate(-50%, -100%) rotate(60deg); }
+.petal.main:nth-child(4) { transform: translate(-50%, -100%) rotate(120deg); }
+.petal.main:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); }
+.petal.main:nth-child(6) { transform: translate(-50%, -100%) rotate(240deg); }
+.petal.main:nth-child(7) { transform: translate(-50%, -100%) rotate(300deg); }
+
+/* Posicionamiento de los pétalos secundarios */
+.petal.secondary:nth-child(8) { transform: translate(-50%, -100%) rotate(30deg); }
+.petal.secondary:nth-child(9) { transform: translate(-50%, -100%) rotate(90deg); }
+.petal.secondary:nth-child(10) { transform: translate(-50%, -100%) rotate(150deg); }
+.petal.secondary:nth-child(11) { transform: translate(-50%, -100%) rotate(210deg); }
+.petal.secondary:nth-child(12) { transform: translate(-50%, -100%) rotate(270deg); }
+.petal.secondary:nth-child(13) { transform: translate(-50%, -100%) rotate(330deg); }
